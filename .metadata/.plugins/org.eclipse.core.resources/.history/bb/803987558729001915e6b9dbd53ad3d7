@@ -1,0 +1,36 @@
+package com.example.demo.model;
+
+import javax.persistence.Embedded;
+
+public class Pessoa {
+
+	private String nome;
+	private boolean activo;
+	@Embedded
+	private Endereco endereco;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public boolean isActivo() {
+		return activo;
+	}
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+}

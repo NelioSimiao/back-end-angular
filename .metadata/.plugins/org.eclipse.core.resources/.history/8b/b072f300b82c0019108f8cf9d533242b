@@ -1,0 +1,14 @@
+package com.example.demo.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demo.model.Categoria;
+import com.example.demo.model.Lancamento;
+import com.example.demo.repository.filter.LancamentoFilter;
+import com.example.demo.repository.lancamento.LancamentosRepositoryQuery;
+
+public interface LancamentosRepository extends JpaRepository<Lancamento, Long>, LancamentosRepositoryQuery {
+
+}

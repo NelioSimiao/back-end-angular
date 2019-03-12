@@ -1,0 +1,4 @@
+insert into categoria value ('Lazer');
+insert into categoria value ('Alimentacao');
+insert into categoria value ('Supermercado');
+insert into categoria value ('Outros');

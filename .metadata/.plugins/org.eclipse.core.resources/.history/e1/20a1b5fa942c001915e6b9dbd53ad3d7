@@ -1,0 +1,12 @@
+package com.example.demo.model;
+
+public enum TipoLancamento {
+	
+    @JsonProperty("ready")
+
+	RESCEITA,
+    @JsonProperty("notReady")
+
+	DESPESA
+
+}

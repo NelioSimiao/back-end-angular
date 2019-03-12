@@ -1,0 +1,10 @@
+package com.example.demo.repository.lancamento;
+
+import java.util.List;
+
+import com.example.demo.model.Lancamento;
+
+public interface CategoriasRepositoryQuery {
+	public List<Lancamento>  filtrar(Lancamento lancamentoFilter);
+
+}

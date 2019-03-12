@@ -1,0 +1,20 @@
+package com.example.demo.repository.lancamento;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.example.demo.model.Lancamento;
+
+public class LancamentosRepositoryQueryImp implements LancamentosRepositoryQuery {
+	
+	@PersistenceContext
+	private EntityManager manager;
+
+	@Override
+	public List<Lancamento> filtrar(Lancamento lancamentoFilter) {
+		return null;
+	}
+
+}

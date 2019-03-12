@@ -1,0 +1,15 @@
+package com.example.demo.event.listener;
+
+import org.springframework.context.ApplicationListener;
+
+import com.example.demo.event.RecursoCriadoEvento;
+
+public class RecursoCriadoEventoListener implements ApplicationListener<RecursoCriadoEvento> {
+
+	@Override
+	public void onApplicationEvent(RecursoCriadoEvento event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

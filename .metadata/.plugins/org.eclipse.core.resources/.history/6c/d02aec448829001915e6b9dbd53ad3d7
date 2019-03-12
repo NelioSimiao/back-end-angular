@@ -1,0 +1,12 @@
+package com.example.demo.resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.repository.PessoasRepository;
+
+public class PesssoasResource {
+	
+	@Autowired
+	private PessoasRepository pessoasRepository;
+
+}

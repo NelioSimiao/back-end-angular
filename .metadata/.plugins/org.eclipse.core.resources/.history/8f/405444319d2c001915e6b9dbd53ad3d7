@@ -1,0 +1,62 @@
+package com.example.demo.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Lancamento;
+import com.example.demo.model.Pessoa;
+import com.example.demo.repository.LancamentosRepository;
+import com.example.demo.repository.PessoasRepository;
+
+@Service
+public class LancamentoService {
+
+	@Autowired
+	private LancamentosRepository lancamentosRepository;
+
+	@Autowired
+	private PessoaService pessoaService;
+
+	public Lancamento salvar(Lancamento lancamento) {
+
+		Pessoa pessoaSalva = pessoaService.buscarPessoaSalva(lancamento.getPessoa().getCodigo());
+		
+		if(pessoaSalva.isInativo()) {
+			throw new PessoaInactivaException();
+		}
+
+	}
+
+	public Lancamento actualizar(Long codigo, Lancamento lancamento) {
+
+		Optional<Lancamento> lancamentoSalva = buscarLancamentoSalva(codigo);
+		BeanUtils.copyProperties(lancamento, lancamentoSalva.get(), "codigo");
+
+		return lancamentosRepository.save(lancamentoSalva.get());
+
+	}
+
+	/*
+	 * public void actualizarPropriedadeActivo(Long codigo, Boolean activo) {
+	 * Lancamento pessoaSalva = lancamentosRepository(codigo).get();
+	 * pessoaSalva.setActivo(activo); pessoasRepository.save(pessoaSalva);
+	 * 
+	 * }
+	 */
+
+	private Optional<Lancamento> buscarLancamentoSalva(Long codigo) {
+		Optional<Lancamento> lancamentoSalva = lancamentosRepository.findById(codigo);
+
+		if (!lancamentoSalva.isPresent()) {
+
+			throw new EmptyResultDataAccessException(1);
+
+		}
+		return lancamentoSalva;
+	}
+
+}

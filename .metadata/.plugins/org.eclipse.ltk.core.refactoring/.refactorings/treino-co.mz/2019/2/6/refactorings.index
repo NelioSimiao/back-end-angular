@@ -1,0 +1,29 @@
+1549387768837	Copy file
+1549387894770	Delete element
+1549399981732	Rename type 'Pesssoas'
+1549400216346	Copy file
+1549402281811	Rename type 'RecursoCriadoEvento'
+1549402681422	Extract method 'setHeader'
+1549403677875	Extract local variable 'pessoa'
+1549572161517	Extract method 'buscarPessoaSalva'
+1549729749080	Copy file
+1549729768011	Rename resource 'V2__criar_Lancamento.sql'
+1549732017715	Copy compilation unit
+1549732030899	Delete element
+1549733810591	Copy compilation unit
+1549733878273	Copy compilation unit
+1549734454070	Copy compilation unit
+1549738615612	Rename type 'Pessoaservice'
+1549738824189	Extract local variable 'buscarPessoaSalva'
+1549740652894	Rename type 'CategoriasRepositoryQuery'
+1549747524831	Extract local variable 'createQuery'
+1549747596108	Extract local variable 'root'
+1549747807906	Extract local variable 'query'
+1549748106744	Extract local variable 'createria'
+1549748170355	Extract local variable 'root'
+1549748330672	Extract local variable 'query'
+1549748348608	Extract local variable 'resultList'
+1549751128141	Rename type 'LancamentosRepositoryQueryImp'
+1549755301880	Extract local variable 'page'
+1549755836582	Extract local variable 'criteria'
+1549755872989	Extract local variable 'root'

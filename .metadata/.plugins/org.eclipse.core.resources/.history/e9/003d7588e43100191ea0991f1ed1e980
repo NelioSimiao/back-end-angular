@@ -1,0 +1,13 @@
+package com.example.demo.config;
+
+import java.util.Collection;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.stereotype.Component;
+
+@Component
+public class UserDetail implements UserDetailsService {
+	private static final long serialVersionUID = 1L;
+
+
+}

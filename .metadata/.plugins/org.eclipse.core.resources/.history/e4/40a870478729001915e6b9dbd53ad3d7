@@ -1,0 +1,12 @@
+package com.example.demo.model;
+
+import javax.persistence.Embedded;
+
+public class Pessoa {
+	
+	private String nome;
+	private boolean activo;
+	@Embedded
+	private Endereco endereco;
+
+}

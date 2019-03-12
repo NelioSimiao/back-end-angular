@@ -1,0 +1,33 @@
+package com.example.demo.model.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+
+import com.example.demo.model.Pessoa;
+import com.example.demo.repository.PessoasRepository;
+
+public class Pessoaservice {
+
+	@Autowired
+	private PessoasRepository pessoasRepository;
+
+	public Pessoa actualizar(Long codigo, Pessoa pessoa) {
+
+		Optional<Pessoa> pessoaSalva = pessoasRepository.findById(codigo);
+
+		if (!pessoaSalva.isPresent()) {
+
+			throw new EmptyResultDataAccessException(1);
+
+		}
+		BeanUtils.copyProperties(pessoa, pessoaSalva.get(), "codigo");
+		
+		
+		return pessoasRepository.save(pessoaSalva.get());
+
+	}
+
+}

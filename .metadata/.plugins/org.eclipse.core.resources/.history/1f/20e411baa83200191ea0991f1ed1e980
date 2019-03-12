@@ -1,0 +1,6 @@
+package com.example.demo.projecao.copy;
+
+public class Snippet {
+		public Page<ResumoLancamento> resumir(LancamentoFilter lancamentoFilter, Pageable pageable);
+}
+
